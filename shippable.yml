@@ -22,12 +22,12 @@ build:
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR
     - ls -al $SHIPPABLE_BUILD_DIR/..
     - sudo apt-get install -y nodejs
-    - su -c "which npm" newuser
+    - su -c "cp -r $SHIPPABLE_BUILD_DIR ~/newrepodir" newuser
     - su -c "whoami" newuser
     - su -c "touch test.txt" newuser
-    - su -p -c "npm install" newuser || true
-    - su -c "ls -al" newuser
+    - su -p -c "cd ~/newrepodir && npm install" newuser || true
+    - su -c "ls -al ~/newrepodir" newuser
     - sudo -H -u newuser "whoami"
-    - sudo -H -u newuser "npm install"
+   # - sudo -H -u newuser "npm install"
     
 

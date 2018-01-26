@@ -23,6 +23,7 @@ build:
     - ls -al $SHIPPABLE_BUILD_DIR/..
     - sudo apt-get install -y nodejs
     - su -c "which npm" newuser
-    - su -c "shippable_retry npm install" newuser
+    - su -c "whoami" newuser
+    - sudo -u newuser "shippable_retry npm install"
     
 

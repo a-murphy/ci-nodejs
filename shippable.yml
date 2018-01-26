@@ -19,6 +19,7 @@ build:
     - sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/npm*
     - sudo rm -rf /usr/lib/node_modules
     - rm -rf /root/.npm
+    - chmod +x /root
     - adduser --disabled-password --gecos "" newuser
     - NEW_BUILD_DIR=/home/newuser/newbuilddir
     - cp -r $SHIPPABLE_BUILD_DIR $NEW_BUILD_DIR

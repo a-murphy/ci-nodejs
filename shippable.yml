@@ -24,7 +24,10 @@ build:
     - sudo apt-get install -y nodejs
     - su -c "which npm" newuser
     - su -c "whoami" newuser
+    - su -c "touch test.txt" newuser
     - su -p -c "npm install" newuser || true
+    - su -c "ls -al" newuser
+    - sudo -H -u newuser "whoami"
     - sudo -H -u newuser "npm install"
     
 

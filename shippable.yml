@@ -24,6 +24,7 @@ build:
     - sudo apt-get install -y nodejs
     - su -c "which npm" newuser
     - su -c "whoami" newuser
-    - sudo -H -u newuser /bin/bash "shippable_retry npm install"
+    - su -p -c "shippable_retry npm install" newuser || true
+    - sudo -H -u newuser /bin/sh "shippable_retry npm install"
     
 

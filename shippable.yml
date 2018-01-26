@@ -25,6 +25,6 @@ build:
     - su -c "which npm" newuser
     - su -c "whoami" newuser
     - su -p -c "npm install" newuser || true
-    - sudo -u newuser /bin/sh "npm install"
+    - sudo -H -u newuser "npm install"
     
 

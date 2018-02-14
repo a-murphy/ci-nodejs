@@ -11,8 +11,8 @@ branches:
     - master
 
 build:
-  pre_ci_boot:
-    options: "-e HOME=/home/newuser"
+#  pre_ci_boot:
+#    options: "-e HOME=/home/newuser"
 
   # http://docs.shippable.com/ci/shippableyml/#ci
   ci:

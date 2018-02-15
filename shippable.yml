@@ -14,6 +14,7 @@ build:
   pre_ci_boot:
     image_name: amurphy/test
     image_tag: seconduser
+    pull: true
     options: "--user newuser -e HOME=/home/newuser"
 
   # http://docs.shippable.com/ci/shippableyml/#ci
